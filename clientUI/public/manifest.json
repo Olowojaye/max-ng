@@ -1,0 +1,13 @@
+{
+  "short_name": "Max App",
+  "name": "Max Engineering Tutorials web app",
+  "icons": [
+    {
+      "src": "./logo.svg",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
