@@ -1,0 +1,36 @@
+.DropDown {
+    display: grid;
+    place-items: center;
+}
+
+.sub-link {
+    display: block;
+    color: rgb(228, 184, 184);
+    padding: 5px 15px;
+}
+
+.sub-link:hover {
+    background-color: blue;
+}
+
+/* For PCs */
+
+@media screen and (min-width: 768px) {
+    .DropDown {
+        border: 1px gray solid;
+        border-bottom: none;
+        width: 10vw;
+    }
+
+    .sub-link {
+        border-bottom: 1px gray solid;
+        color: blue;
+        background-color: #f7f7f7;
+        text-align: center;
+    }
+
+    .sub-link:hover {
+        background-color: #faab99;
+    }
+    
+}

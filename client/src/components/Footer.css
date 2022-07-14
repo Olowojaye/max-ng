@@ -1,0 +1,54 @@
+.social-icons {
+    display: inline-block;
+    margin-right: 4vw;
+}
+
+.socials .lab, .socials .las {
+    transform: scale(3);
+    padding-right: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: #7c1034;
+}
+
+.div-1, .div-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    place-items: center;
+    padding-bottom: 1vh;
+}
+
+.description, .socials, .developer, .copyright {
+    width: 88vw;
+    padding-top: .5rem;
+    display: grid;
+    place-items: center;
+    margin-left: 4vw;
+}
+
+
+.page-up {
+    background-color: #b5b5b5;
+    padding: .75h;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Footer {
+    background-color: white;
+    color: #7c1034;
+    position: fixed;
+    width: calc(96vw - 4px);
+    bottom: 0;
+    left: calc(2vw + 2px);
+    z-index: 0;
+    box-shadow: 0 0 2px gray;
+}
+
+
+@media screen and (min-width: 768px) {
+    .description, .socials, .developer, .copyright {
+        width: 43vw;
+    }
+}

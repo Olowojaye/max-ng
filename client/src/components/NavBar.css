@@ -1,0 +1,145 @@
+.nav-closed {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    background-color: #7c1034;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    width: 0%;
+    display: grid;
+    grid-template-rows: 1fr 7fr 2fr;
+}
+
+.nav-open {
+    width: 100%;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.main-link {
+    display: block;
+    color: white;
+    width: 100vw;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-link:hover {
+    background-color: #2653a8;
+}
+
+.active {
+    color: orange;
+}
+
+.sub-closed {
+    height: 0;
+    overflow: hidden;
+}
+
+.sub-open {
+    height: auto;
+}
+
+.NavComponent {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    place-items: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 0 1px gray;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 4px;
+    z-index: 100;
+}
+
+.la-bars {
+    color: #191919;
+    display: inline-block;
+    transform: scale(1.75);
+    border: 1px solid #252d9c;
+}
+
+.la-times {
+    color: white;
+    transform: scale(2.5);
+    justify-self: start;
+    margin-left: 5vw;
+    margin-top: 5vh;
+}
+
+
+/* PC view */
+@media screen and (min-width: 768px) {
+    .la-bars, .la-times {
+        display: none;
+    }
+
+    .nav-closed {
+        all: unset;
+        justify-self: end;
+    }
+    
+    .links-wrapper {
+        all: unset;
+        display: inline-grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-items: start;
+        align-items: center;
+        width: 70vw;
+        border: 1px gray solid;
+        margin-right: 2vw;
+    }
+    
+    .main-link {
+        all: unset;
+        color: #003399;
+        padding: .5vw 0;
+        width: 100%;
+        text-align: center;
+        border-right: 1px gray solid;
+    }
+
+    .main-link:hover {
+        background-color: #faab99;
+        cursor: pointer;
+    }
+    
+    .NavComponent {
+        all: unset;
+        display: grid;
+        grid-template-columns: 0.5fr 4.5fr;
+        place-items: center;
+        width: 100vw;
+        box-shadow: 0 0 1px gray;
+        padding: 0.75rem 0;
+        background-color: white;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 4px;
+        z-index: 100;
+    }
+
+    .sub-closed {
+        display: none;
+    }
+    
+    .sub-open {
+        display: block;
+        z-index: 100;
+        position: absolute;
+        left: 57.96vw;
+        top: 47px;
+    }
+    .active {
+        color: orange;
+    }
+}
